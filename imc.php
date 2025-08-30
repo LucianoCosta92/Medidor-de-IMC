@@ -15,7 +15,7 @@
             $peso = $_GET["peso"];
             $altura = $_GET["altura"];
             $resultado = $peso / ($altura * $altura);
-            echo "<center>Seu IMC é: <strong>" . number_format($resultado, 2, '.', '') . "</strong></center><br>";
+            echo "<center>Seu IMC é: <strong>" . number_format($resultado, 1, '.', '') . "</strong></center><br>";
         ?>
 
         <img src="image/tabela.png" class="minha-imagem" alt="imagem">
