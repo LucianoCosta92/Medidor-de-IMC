@@ -227,8 +227,8 @@ input[type=radio] + label, input[type=checkbox] + label {
 }
 
 .minha-imagem {
-    max-width: 200px;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;

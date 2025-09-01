@@ -15,7 +15,26 @@
             $peso = $_GET["peso"];
             $altura = $_GET["altura"];
             $resultado = $peso / ($altura * $altura);
-            echo "<center>Seu IMC é: <strong>" . number_format($resultado, 1, '.', '') . "</strong></center><br>";
+            if($resultado <= 18.5){
+                echo "<center>Seu IMC é: <strong>" . number_format($resultado, 1, '.', '') . "</strong></center><br>";
+                echo "<center>(Abaixo do peso)</center>";
+            } elseif($resultado >= 18.6 and $resultado <= 24.9){
+                echo "<center>Seu IMC é: <strong>" . number_format($resultado, 1, '.', '') . "</strong></center><br>";
+                echo "<center>(Peso ideal)</center>";
+            } elseif($resultado >= 25.0 and $resultado <= 29.9){
+                echo "<center>Seu IMC é: <strong>" . number_format($resultado, 1, '.', '') . "</strong></center><br>";
+                echo "<center>(Levemente acima do peso)</center>";
+            } elseif($resultado >= 30.0 and $resultado <= 34.9){
+                echo "<center>Seu IMC é: <strong>" . number_format($resultado, 1, '.', '') . "</strong></center><br>";
+                echo "<center>(Obesidade grau I)</center>";
+            } elseif($resultado >= 35.0 and $resultado <= 39.9){
+                echo "<center>Seu IMC é: <strong>" . number_format($resultado, 1, '.', '') . "</strong></center><br>";
+                echo "<center>(Obesidade grau II - severa)</center>";
+            } else{
+                echo "<center>Seu IMC é: <strong>" . number_format($resultado, 1, '.', '') . "</strong></center><br>";
+                echo "<center>(Obesidade III - mórbida)</center>";
+            }
+            echo "<br>";
         ?>
 
         <img src="image/tabela.png" class="minha-imagem" alt="imagem">
